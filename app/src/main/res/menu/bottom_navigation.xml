@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xxmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:xxmlns="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_open"
+        app:showAsAction="always"
+        android:title="QUOTED"
+        android:icon="@drawable/ic_folder_open_black_24dp"
+        xxmlns:ignore="MenuTitle" />
+    <item
+        xxmlns:ignore="MenuTitle"
+        android:id="@+id/action_pull"
+        android:title="PULLED"
+        android:icon="@drawable/ic_folder_open_black_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:icon="@drawable/ic_delivered_car_black_24dp"
+        xxmlns:ignore="MenuTitle"
+        android:id="@+id/action_deliver"
+        android:title="DELIVERD"
+        app:showAsAction="always"/>
+
+
+</menu>

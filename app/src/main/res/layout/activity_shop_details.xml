@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.debongz.nextldsaadmin.ShopDetails">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/shop_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appcolor">
+
+
+    </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_below="@+id/shop_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:hint="Search..."
+                android:id="@+id/serach_cust_txt"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text"/>
+
+            <ProgressBar
+                android:id="@+id/load_re"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:theme="@style/AppTheme"
+                android:visibility="gone"
+
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/serach_cust_txt"
+                android:layout_marginTop="20dp"
+                android:id="@+id/list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

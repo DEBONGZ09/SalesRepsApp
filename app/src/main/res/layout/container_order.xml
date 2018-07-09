@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:background="@drawable/border"
+    android:padding="5dp"
+    >
+<RelativeLayout
+    android:id="@+id/topdiv"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/txtoname"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:maxWidth="250dp"
+        android:layout_height="wrap_content"
+        android:text="Ginger Cake"
+        />
+
+    <TextView
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/txtototal"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:maxWidth="150dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="R 1150.99"
+        />
+
+</RelativeLayout>
+
+           <LinearLayout
+               android:layout_below="@+id/topdiv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:id="@+id/txtoqty"
+                   android:padding="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:text="10"
+                   />
+               <TextView
+                   android:id="@+id/txtounit"
+                   android:padding="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:text="Box"
+                   />
+
+           </LinearLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/txtonumber"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00e0e009r993"
+                />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+

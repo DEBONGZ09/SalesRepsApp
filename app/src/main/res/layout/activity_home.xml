@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.debongz.nextldsaadmin.Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/appcolor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="NEXTLD SADMIN"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:gravity="right"
+                android:src="@drawable/ic_more_vert_white"
+                android:clickable="true"
+                android:onClick="more"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:gravity="right"
+                android:src="@drawable/ico_power_white"
+                android:clickable="true"
+                android:onClick="logout"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.Toolbar>
+
+       <RelativeLayout
+           android:layout_below="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:background="#FFFFFF"
+           android:layout_height="match_parent">
+           <TextView
+               android:id="@+id/rephometxt"
+               android:padding="5dp"
+               android:layout_margin="10dp"
+               android:layout_width="wrap_content"
+               android:text=""
+               android:layout_centerHorizontal="true"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:textSize="14sp"
+               android:textColor="@color/blue"
+               android:layout_height="wrap_content" />
+           <LinearLayout
+               android:orientation="horizontal"
+               android:id="@+id/hr"
+               android:layout_below="@+id/rephometxt"
+               android:layout_width="match_parent"
+               android:background="@drawable/border_ligt_blue"
+               android:visibility="visible"
+               android:layout_height="2dp"></LinearLayout>
+           <ProgressBar
+               android:layout_below="@+id/hr"
+               android:id="@+id/load_quote"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginBottom="10dp"
+               android:layout_centerHorizontal="true"
+               android:theme="@style/AppTheme"
+               android:visibility="gone"
+
+               />
+           <android.support.v4.widget.SwipeRefreshLayout
+               android:layout_below="@+id/load_quote"
+               android:id="@+id/swipeRefreshLayout"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+           <android.support.v7.widget.RecyclerView
+               android:layout_marginTop="5dp"
+               android:id="@+id/list_quotes"
+               android:layout_width="fill_parent"
+               android:layout_height="match_parent"
+
+               />
+           </android.support.v4.widget.SwipeRefreshLayout>
+
+
+       </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_new_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:theme="@style/AppTheme"
+            android:src="@drawable/ic_add_white_24dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".SearchResultsActivity">
+    <item
+        android:id="@+id/save"
+        xmlns:pawesome="http://schemas.android.com/apk/res-auto"
+        android:title="SAVE"
+        pawesome:showAsAction="always"
+        />
+    <item
+        android:id="@+id/delete"
+        xmlns:pawesome="http://schemas.android.com/apk/res-auto"
+        android:title="DELETE"
+        pawesome:showAsAction="never"
+  />
+
+</menu>

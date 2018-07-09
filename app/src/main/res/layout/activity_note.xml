@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.debongz.nextldsaadmin.Note">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbaritem"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/Base.Widget.AppCompat.PopupMenu.Overflow"
+            android:background="@color/appcolor">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_back_arrow_white"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:visibility="gone"
+               />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="ADD ITEM"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/save_note"
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="SAVE"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.Toolbar>
+        <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_below="@+id/toolbaritem"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+        android:textSize="14sp"
+        android:id="@+id/notetxt"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:minHeight="100dp"
+        android:maxHeight="200dp"
+        android:hint="Type note here..."
+        android:background="@drawable/border"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

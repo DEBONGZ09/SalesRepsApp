@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.debongz.nextldsaadmin.Order">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/appcolor">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_back_arrow_white"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:onClick="goback"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="NEW ORDER"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="ADD ITEM"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="showPop"
+                />
+            <TextView
+                android:id="@+id/save_quote"
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="SAVE"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:background="#FFFFFF"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Customer Name: Falguni"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/shop_addr"
+                android:layout_below="@+id/shop_name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Address: sdvsdvsfd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_below="@+id/shop_addr"
+                android:id="@+id/sales_person"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Sales Person: sdvsdvsfd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/hr"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/sales_person"
+                android:layout_width="match_parent"
+                android:background="@drawable/border_ligt_blue"
+                android:visibility="gone"
+                android:layout_height="2dp">
+            </LinearLayout>
+            <LinearLayout
+                android:clickable="true"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:id="@+id/note"
+                android:background="@color/light_blue"
+                android:layout_below="@+id/hr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addNote">
+                <TextView
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textStyle="italic"
+                    android:id="@+id/thenotetxtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click here to add note..."/>
+
+            </LinearLayout>
+            <RelativeLayout
+
+                android:layout_below="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:id="@+id/load_order"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:theme="@style/AppTheme"
+                    android:visibility="gone"
+
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/list_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+<RelativeLayout
+    android:id="@+id/add_items_pop_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible">
+        <LinearLayout
+            android:alpha="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            >
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginRight="15dp">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/search_items_toolbar"
+                android:minHeight="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@android:color/white"
+                android:background="@color/appcolor">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:onClick="hidePop"
+                    android:src="@drawable/ico_back_arrow_white"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Select Item"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18sp"/>
+
+            </android.support.v7.widget.Toolbar>
+            <RelativeLayout
+                android:layout_below="@+id/search_items_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:hint="Search..."
+                    android:id="@+id/serach_txt"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text"/>
+            <ProgressBar
+                android:id="@+id/load_re_items"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:theme="@style/AppTheme"
+                android:visibility="gone"
+
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/serach_txt"
+                android:id="@+id/product_list"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                />
+            </RelativeLayout>
+        </RelativeLayout>
+</RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

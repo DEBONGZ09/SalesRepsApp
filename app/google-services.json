@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "894998120871",
+    "firebase_url": "https://nextldsaadmin.firebaseio.com",
+    "project_id": "nextldsaadmin",
+    "storage_bucket": "nextldsaadmin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894998120871:android:364ae1944a4fe312",
+        "android_client_info": {
+          "package_name": "com.example.debongz.nextldsaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894998120871-1dfvupa0031mrtn51fg63lt9bif57urd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.debongz.nextldsaadmin",
+            "certificate_hash": "8cd3bdf6a6e2ebf55eef5ddc920a5e14918b172d"
+          }
+        },
+        {
+          "client_id": "894998120871-cp5gqhjkcg834ae02te26j1nr2s7pujf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP0sTvrNJT1ZOTZ7dUE87Er_wSn1AI81g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894998120871-cp5gqhjkcg834ae02te26j1nr2s7pujf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
